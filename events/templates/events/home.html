@@ -1,0 +1,23 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Events</title>
+	<style type="text/css">
+		p{
+			background: tomato;
+			width: 400px;
+			color: yellow;
+		}
+	</style>
+</head>
+<body>
+<h1>Homepage</h1>
+{% for event in events.all %}
+	<p>	
+		<img src="{{event.event_image.url}}" width="100">
+	{{event.event_text}}
+	</p>
+{% endfor %}
+</body>
+</html>
